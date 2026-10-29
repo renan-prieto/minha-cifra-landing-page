@@ -1,0 +1,36 @@
+:root {
+  font-family: 'Bricolage Grotesque', 'Avenir Next', sans-serif;
+  color: #0a1b3d;
+  background: #f1f0ec;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #f9f063;
+  color: #001c44;
+}
+
+html { scroll-padding-top: 20px; }
+
+body { font-synthesis: none; }
