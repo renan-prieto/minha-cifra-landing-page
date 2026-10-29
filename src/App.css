@@ -222,7 +222,7 @@
 .about-page .site-header nav .nav-active { text-decoration: underline; text-underline-offset: 5px; }
 .about-page .header-cta { display: none; }
 
-.about-page main { max-width: 720px; margin: -16px auto 0; padding: 0 16px 36px; display: grid; gap: 16px; }
+.about-page main { max-width: 592px; margin: -16px auto 0; padding: 0 16px 36px; display: grid; gap: 16px; }
 .about-page .about-hero { min-height: 0; max-width: none; padding: 28px 22px 34px; border-radius: 20px; background: var(--navy); color: var(--paper); text-align: center; }
 .about-page .about-hero .eyebrow { justify-content: center; color: var(--yellow); }
 .about-page .about-hero .eyebrow > span { background: var(--yellow); }
@@ -234,7 +234,7 @@
 .about-page .about-count small { color: #d7deea; }
 .about-page .about-doodle { display: none; }
 
-.about-page .team-section { padding: 20px; border-radius: 20px; background: transparent; }
+.about-page .team-section { padding: 0; background: transparent; }
 .about-page .team-heading { display: block; margin: 0 0 16px; }
 .about-page .team-heading h2 { margin-top: 5px; font: 700 24px/1.2 'Bricolage Grotesque', system-ui, sans-serif; }
 .about-page .team-heading h2 em { color: var(--navy); }
@@ -243,20 +243,17 @@
 .about-page .team-card,
 .about-page .team-card-2,
 .about-page .team-card-3 { min-height: 0; padding: 20px; border: 0; border-radius: 20px; background: #fff; box-shadow: 0 6px 22px rgba(0, 28, 68, .14); }
-.about-page .team-card-top { min-height: 72px; }
-.about-page .member-number { color: var(--blue); font-size: 10px; }
-.about-page .member-initials,
-.about-page .team-card-2 .member-initials,
-.about-page .team-card-3 .member-initials,
-.about-page .team-card-4 .member-initials { width: 64px; height: 64px; border: 3px solid var(--yellow); outline: 2px solid var(--navy); outline-offset: -1px; background: var(--paper); font: 700 18px 'Playfair Display', Georgia, serif; }
-.about-page .member-role { margin-top: 2px; color: var(--blue); font-size: 15px; }
-.about-page .member-info h3 { max-width: none; margin-bottom: 5px; font: 700 19px/1.2 'Bricolage Grotesque', system-ui, sans-serif; }
-.about-page .member-info ul { margin: 10px 0 4px 20px; padding: 0; color: var(--ink); font-size: 15px; line-height: 1.45; }
-.about-page .member-info li { margin: 4px 0; }
-.about-page .member-links { gap: 10px; padding-top: 14px; margin-top: 14px; border: 0; }
-.about-page .member-links a { flex: 1; padding: 13px 8px; border: 1.5px solid var(--navy); border-radius: 12px; background: var(--paper); text-align: center; font-size: 15px; }
-.about-page .member-links a:last-child { background: var(--navy); color: var(--yellow); }
-.about-page .member-links a span { display: none; }
+.about-page .team-card-top { min-height: 84px; display: flex; align-items: center; gap: 14px; }
+.about-page .member-photo { flex: none; width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 3px solid var(--yellow); outline: 2px solid var(--navy); outline-offset: -1px; }
+.about-page .team-card-top h3 { font: 700 19px/1.2 'Bricolage Grotesque', system-ui, sans-serif; }
+.about-page .member-role { margin: 2px 0 0; color: var(--blue); font-size: 15px; }
+.about-page .member-tasks { margin: 14px 0 4px 20px; padding: 0; color: var(--ink); font-size: 15.5px; line-height: 1.45; }
+.about-page .member-tasks li { margin: 4px 0; }
+.about-page .member-links { display: flex; gap: 10px; margin-top: 16px; }
+.about-page .member-links a { flex: 1; padding: 13px 8px; border: 1.5px solid var(--navy); border-radius: 12px; text-align: center; text-decoration: none; font-size: 15px; font-weight: 700; }
+.about-page .member-link-linkedin { background: var(--paper); color: var(--navy) !important; }
+.about-page .member-link-whatsapp { background: var(--navy); color: var(--yellow) !important; }
+.about-page .member-links a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; box-shadow: 0 0 0 5px var(--navy); }
 .about-page .about-note { max-width: none; margin: 0; padding: 20px; flex-direction: column; gap: 10px; border-radius: 20px; background: #fff; box-shadow: 0 6px 22px rgba(0, 28, 68, .14); text-align: center; }
 .about-page .about-note .note-symbol { width: 34px; height: 34px; }
 .about-page .about-note p { flex: initial; font: 700 19px 'Bricolage Grotesque', system-ui, sans-serif; }
@@ -268,7 +265,6 @@
 	.about-page main { padding: 0 16px 30px; gap: 16px; }
 	.about-page .about-hero { padding: 24px 18px; }
 	.about-page .about-hero h1 { font-size: 30px; }
-	.about-page .team-section { padding: 18px 0; }
-	.about-page .team-card { padding: 18px; }
+	.about-page .team-card { padding: 20px; }
 }
 
