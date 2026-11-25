@@ -64,7 +64,7 @@ function AboutPage() {
         <section className="about-hero">
           <p className="eyebrow"><span /> QUEM FAZ ACONTECER</p>
           <h1>Um projeto construído <em>em conjunto.</em></h1>
-          <div className="about-hero-bottom"><p>O Minha Cifra é um projeto de TCC que aproxima imposto de renda e gestão financeira. Conheça as pessoas e as frentes de trabalho que dão vida a essa ideia.</p><span className="about-count">04 <small>INTEGRANTES</small></span></div>
+          <div className="about-hero-bottom"><p>O Minha Cifra é um projeto de TCC que aproxima imposto de renda e gestão financeira. Conheça as pessoas e as frentes de trabalho que dão vida a essa ideia.</p></div>
           <span className="about-doodle" aria-hidden="true">✳</span>
         </section>
         <section className="team-section">
