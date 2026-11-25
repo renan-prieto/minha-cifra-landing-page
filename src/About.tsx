@@ -1,4 +1,5 @@
 import './App.css';
+import icon from './assets/icon.jpeg';
 import kauPhoto from './assets/kaue.jpg';
 import vitoriaPhoto from './assets/vitoria.jpg';
 import renanPhoto from './assets/renan.jpg';
@@ -41,9 +42,9 @@ const team = [
 
 function Header({ about = false }: { about?: boolean }) {
   return (
-    <header className="site-header">
+    <header className="site-header site-header--stacked">
       <a className="brand" href="/" aria-label="Minha Cifra, início">
-        <span className="brand-mark" aria-hidden="true">mc</span>
+        <img className="brand-mark" src={icon} alt="" aria-hidden="true" />
         <span>minha cifra</span>
       </a>
       <nav aria-label="Navegação principal">
@@ -86,7 +87,7 @@ function AboutPage() {
 }
 
 function Footer() {
-  return <footer className="site-footer"><a className="brand" href="/"><span className="brand-mark" aria-hidden="true">mc</span><span>minha cifra</span></a><span>Projeto de TCC · 2026</span><a href="/sobre-nos">Sobre nós <span aria-hidden="true">↗</span></a></footer>;
+  return <footer className="site-footer"><a className="brand" href="/"><img className="brand-mark" src={icon} alt="" aria-hidden="true" /><span>minha cifra</span></a><span>Projeto de TCC · 2026</span><a href="/sobre-nos">Sobre nós <span aria-hidden="true">↗</span></a></footer>;
 }
 
 export default AboutPage;

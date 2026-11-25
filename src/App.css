@@ -34,7 +34,7 @@
 }
 
 .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 800; }
-.brand-mark { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 50%; background: var(--yellow); color: var(--navy); font: 800 13px 'Playfair Display', Georgia, serif; letter-spacing: -1px; }
+.brand-mark { width: 31px; height: 31px; display: block; border-radius: 7px; object-fit: cover; }
 .site-header nav { display: flex; gap: 38px; align-items: center; margin-left: auto; margin-right: 44px; }
 .site-header nav a { color: #52617b; font-size: 14px; transition: color 160ms ease; }
 .site-header nav a:hover, .site-header nav .nav-active { color: var(--navy); }
@@ -85,7 +85,7 @@
 .floating-note { position: absolute; right: -27px; bottom: 42px; display: flex; align-items: center; gap: 10px; background: var(--navy); color: white; padding: 13px 16px; box-shadow: 0 12px 30px rgba(0, 28, 68, .2); }
 .floating-note > span { width: 25px; height: 25px; display: grid; place-items: center; background: var(--yellow); color: var(--navy); border-radius: 50%; font-size: 13px; font-weight: 800; }
 .floating-note div { display: grid; gap: 3px; }.floating-note strong { font-size: 10px; }.floating-note small { font-size: 8px; color: #c7d1df; }
-.art-stamp { position: absolute; top: -31px; right: -25px; width: 58px; height: 58px; display: grid; place-content: center; text-align: center; border-radius: 50%; background: var(--yellow); font: 800 13px/1.15 'Playfair Display', Georgia, serif; transform: rotate(11deg); }
+.art-stamp { position: absolute; top: -31px; right: -25px; width: 58px; height: 58px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 24px rgba(0, 28, 68, .18); transform: rotate(11deg); }
 .hero-index { position: absolute; bottom: 28px; right: 8.6%; color: #8992a3; font-size: 10px; letter-spacing: 1px; }
 
 .intro-section { padding: 96px 12% 100px; background: #fff; }
@@ -114,7 +114,7 @@
 .manifesto-section blockquote { max-width: 800px; margin: 25px 0 20px; font: 700 clamp(30px, 4vw, 49px)/1.14 'Playfair Display', Georgia, serif; position: relative; z-index: 1; }
 .manifesto-link { font-size: 12px; color: #d1d7e1 !important; border-bottom: 1px solid #8c9ab0; padding-bottom: 6px; position: relative; z-index: 1; }
 .manifesto-link span { margin-left: 12px; color: var(--yellow); }
-.manifesto-mark { position: absolute; right: 13%; bottom: 32px; color: var(--yellow); font: 700 46px 'Playfair Display', Georgia, serif; }
+.manifesto-mark { position: absolute; right: 13%; bottom: 32px; width: 66px; height: 66px; border-radius: 16px; object-fit: cover; }
 .closing-section { display: flex; justify-content: space-between; align-items: end; gap: 30px; padding: 72px 12%; background: var(--yellow); }
 .closing-section .eyebrow { color: #53617b; }.closing-section h2 { font: 700 clamp(36px, 4vw, 53px)/1.05 'Playfair Display', Georgia, serif; margin: 17px 0 0; }
 .button-dark { background: var(--navy); color: var(--yellow) !important; }
@@ -181,7 +181,7 @@
 	.feature-item { min-height: 235px; border-left: 1px solid var(--line); padding: 22px 23px; }
 	.feature-icon { margin: 12px 0 15px; }.feature-item h3 { font-size: 20px; }.feature-item p { max-width: 290px; }
 	.manifesto-section { min-height: 330px; padding: 58px 24px; }.manifesto-section blockquote { font-size: 34px; }.manifesto-section::after { right: -260px; }
-	.manifesto-mark { right: 25px; bottom: 25px; font-size: 35px; }
+	.manifesto-mark { right: 25px; bottom: 25px; width: 52px; height: 52px; }
 	.closing-section { padding: 52px 24px; align-items: flex-start; flex-direction: column; gap: 25px; }.closing-section h2 { font-size: 39px; }
 	.site-footer { padding: 22px 20px; flex-wrap: wrap; }.site-footer > span { order: 3; width: 100%; }
 	.about-hero { min-height: 0; padding: 70px 24px 58px; }.about-hero h1 { margin: 25px 0; }.about-doodle { right: 25px; top: 23px; font-size: 41px; }
@@ -201,7 +201,7 @@
 	line-height: 1.45;
 }
 
-.about-page .site-header {
+.site-header--stacked {
 	min-height: 185px;
 	height: auto;
 	padding: 24px 20px 20px;
@@ -214,13 +214,15 @@
 	border: 0;
 }
 
+.site-header--stacked .brand { flex-direction: column; gap: 8px; color: var(--paper) !important; font-size: 25px; }
+.site-header--stacked .brand-mark { width: 64px; height: 64px; border-radius: 18px; }
+.site-header--stacked nav { order: 2; gap: 24px; margin: 4px 0 0; }
+.site-header--stacked nav a { color: #d7deea; font-size: 13px; }
+.site-header--stacked nav a:hover, .site-header--stacked nav .nav-active { color: var(--yellow); }
+.site-header--stacked nav .nav-active { text-decoration: underline; text-underline-offset: 5px; }
+.site-header--stacked .header-cta { display: none; }
 .about-page .brand { flex-direction: column; gap: 8px; color: var(--paper) !important; font-size: 25px; }
-.about-page .brand-mark { width: 64px; height: 64px; border-radius: 18px; font-size: 25px; }
-.about-page .site-header nav { order: 2; gap: 24px; margin: 4px 0 0; }
-.about-page .site-header nav a { color: #d7deea; font-size: 13px; }
-.about-page .site-header nav a:hover, .about-page .site-header nav .nav-active { color: var(--yellow); }
-.about-page .site-header nav .nav-active { text-decoration: underline; text-underline-offset: 5px; }
-.about-page .header-cta { display: none; }
+.about-page .brand-mark { width: 64px; height: 64px; border-radius: 18px; }
 
 .about-page main { max-width: 592px; margin: -16px auto 0; padding: 0 16px 36px; display: grid; gap: 16px; }
 .about-page .about-hero { min-height: 0; max-width: none; padding: 28px 22px 34px; border-radius: 20px; background: var(--navy); color: var(--paper); text-align: center; }
@@ -260,8 +262,8 @@
 .about-page .about-note em { color: var(--blue); font-size: 14px; }
 
 @media (max-width: 680px) {
-	.about-page .site-header { min-height: 170px; padding: 20px 16px 18px; }
-	.about-page .site-header nav { gap: 22px; }
+	.site-header--stacked { min-height: 170px; padding: 20px 16px 18px; }
+	.site-header--stacked nav { gap: 22px; }
 	.about-page main { padding: 0 16px 30px; gap: 16px; }
 	.about-page .about-hero { padding: 24px 18px; }
 	.about-page .about-hero h1 { font-size: 30px; }

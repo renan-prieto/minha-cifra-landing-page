@@ -1,11 +1,12 @@
 import './App.css';
 import AboutPage from './About';
+import icon from './assets/icon.jpeg';
 
 function Header({ about = false }: { about?: boolean }) {
   return (
-    <header className="site-header">
+    <header className="site-header site-header--stacked">
       <a className="brand" href="/" aria-label="Minha Cifra, início">
-        <span className="brand-mark" aria-hidden="true">mc</span>
+        <img className="brand-mark" src={icon} alt="" aria-hidden="true" />
         <span>minha cifra</span>
       </a>
       <nav aria-label="Navegação principal">
@@ -52,7 +53,7 @@ function LandingPage() {
             </div>
             <div className="art-legend"><span><i className="legend-income" /> Receitas</span><span><i className="legend-expense" /> Despesas</span></div>
             <div className="floating-note"><span>✓</span><div><strong>Imposto de renda</strong><small>Organizado com mais clareza</small></div></div>
-            <span className="art-stamp" aria-hidden="true">MC<br />✳</span>
+            <img className="art-stamp" src={icon} alt="" aria-hidden="true" />
           </div>
           <span className="hero-index" aria-hidden="true">01 / 03</span>
         </section>
@@ -75,7 +76,7 @@ function LandingPage() {
           <p className="eyebrow"><span /> NOSSA IDEIA</p>
           <blockquote>“Cuidar do dinheiro fica mais leve quando você entende o que está acontecendo.”</blockquote>
           <a href="/sobre-nos" className="manifesto-link">Um projeto de TCC, feito em equipe <span aria-hidden="true">↗</span></a>
-          <span className="manifesto-mark" aria-hidden="true">mc</span>
+          <img className="manifesto-mark" src={icon} alt="" aria-hidden="true" />
         </section>
 
         <section className="closing-section">
@@ -89,7 +90,7 @@ function LandingPage() {
 }
 
 function Footer() {
-  return <footer className="site-footer"><a className="brand" href="/"><span className="brand-mark" aria-hidden="true">mc</span><span>minha cifra</span></a><span>Projeto de TCC · 2026</span><a href="/sobre-nos">Sobre nós <span aria-hidden="true">↗</span></a></footer>;
+  return <footer className="site-footer"><a className="brand" href="/"><img className="brand-mark" src={icon} alt="" aria-hidden="true" /><span>minha cifra</span></a><span>Projeto de TCC · 2026</span><a href="/sobre-nos">Sobre nós <span aria-hidden="true">↗</span></a></footer>;
 }
 
 function App() {
